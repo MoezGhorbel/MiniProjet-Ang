@@ -38,7 +38,7 @@ export class AddArticleComponent implements OnInit {
     article.subject = this.addForm.value.subject;
     article.text = this.addForm.value.text;
     this.articleService.addArticle(article);
-    this.router.navigate(['']);
+    this.router.navigate(['/home']);
   }
 
 }

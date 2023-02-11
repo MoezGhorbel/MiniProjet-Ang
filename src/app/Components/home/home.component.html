@@ -7,35 +7,26 @@
         placeholder="Enter title here">
     </div>
   </div>
-  <div class="container">
-    <table>
-      <tr *ngFor="let article of articles | filter: filterText">
-        <div class="wrapper">
-          <div class="div1">
-            <div class="col" style="width: 200px;">
-              <td>{{ article.title }}</td>
-            </div>
-            <div class="col" style="width: 200px;">
-              <td>{{ article.subject }}</td>
-            </div>
-            <div class="col" style="width: 700px;">
-              <td>{{ article.text }}</td>
-            </div>
+  <div class="container d-flex flex-wrap">
+    <div class="card mb-3" style="width: 100%" *ngFor="let article of articles | filter: filterText">
+      <div class="card-header"><span style="font-weight: bold; color: blue;">Title :</span> {{ article.title }}</div>
+      <div class="card-body">
+        <h5 class="card-title"><span style="font-weight: bold;">Subject :</span>&nbsp;{{ article.subject }}</h5>
+        <p class="card-text">{{ article.text }}</p>
+        <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+          <div class="btn-update">
+            <button type="button" class="btn btn-warning" (click)="UpdateArticle(article)" style="margin: 0 15px;">update</button>
           </div>
-          <div class="d-grid gap-3 d-md-flex justify-content-md-end" id="div2">
-            <div class="btn-update">
-              <button type="button" class="btn btn-outline-warning" (click)="UpdateArticle(article)" style="margin: 0 15px;">update</button>
-            </div>
-            <div class="btn-delete">
-              <button type="button" mat-fab color="primary" matTooltip="Delete"
-                matTooltipPosition="right" aria-label="Example icon button with a delete icon"
-                (click)="deleteArticle(article)">
-                <mat-icon>delete</mat-icon>
-              </button></div>
+          <div class="btn-delete">
+            <button type="button" mat-fab color="primary" matTooltip="Delete"
+              matTooltipPosition="right" aria-label="Example icon button with a delete icon"
+              (click)="deleteArticle(article)">
+              <mat-icon>delete</mat-icon>
+            </button>
           </div>
         </div>
-      </tr>
-      <button type="button" class="btn btn-success" [routerLink]="['/add']">Add</button>
-    </table>
+      </div>
+    </div>
   </div>
+  <button type="button" class="btn btn-success" [routerLink]="['/add']">Add</button>
 </form>

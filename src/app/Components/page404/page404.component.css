@@ -1,0 +1,14 @@
+.style{
+    background-color:bisque;
+    margin: auto;
+    padding:300px;
+    font-size: larger;
+    font-weight: 900;
+}
+
+h1{
+    color: red;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}

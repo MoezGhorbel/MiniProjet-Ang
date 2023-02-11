@@ -16,6 +16,7 @@ import { UpdateArticleComponent } from './Components/update-article/update-artic
 import { BlogSRVService } from './Components/blog-srv.service';
 import { FilterPipe } from './filter.pipe';
 import { ArticleService } from './Components/article.service';
+import { Page404Component } from './Components/page404/page404.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ArticleService } from './Components/article.service';
     LoginComponent,
     RegisterComponent,
     UpdateArticleComponent,
-    FilterPipe
+    FilterPipe,
+    Page404Component
   ],
   imports: [
     BrowserModule,

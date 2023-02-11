@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit{
 
   submitLogin() {
     if (this.blogservice.login(this.email, this.password)) {
-      this.router.navigate(['']);
+      this.router.navigate(['/home']);
     } else {
       alert("Error, make sure that your email and password are both correct.");
     }

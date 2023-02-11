@@ -36,6 +36,6 @@ export class UpdateArticleComponent {
 
   Updated() {
     this.articleService.updateArticle(this.updateForm.value);
-    this.router.navigate(['']);
+    this.router.navigate(['/home']);
   }
 }
