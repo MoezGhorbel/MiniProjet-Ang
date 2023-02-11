@@ -1,0 +1,23 @@
+<div class="bg"></div>
+<form [formGroup]="addForm" class="form-group container-fluid" (ngSubmit)="onSubmit()">
+  <legend class="text-center fw-bold mb-5">Add Article</legend>
+  <div class="container">
+    <div class="mb-3 row">
+      <div class="col">
+        <label for="title">Title :</label>
+        <input type="text" class="form-control" formControlName="title" name="title" placeholder="Enter title here">
+      </div>
+      <div class="col">
+        <label for="subject">Subject :</label>
+        <input type="text" class="form-control" formControlName="subject" name="subject" placeholder="Enter subject here">
+      </div>
+    </div>
+    <div class="input-group">
+      <span class="input-group-text">Textarea&nbsp;<span class="material-icons">article</span></span>
+      <textarea class="form-control" aria-label="With textarea" formControlName="text" name="text"></textarea>
+    </div>
+    <div class="btn row">
+      <button type="submit" class="btn btn-success">Done</button>
+    </div>
+  </div>
+</form>

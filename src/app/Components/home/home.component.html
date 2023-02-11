@@ -1,0 +1,41 @@
+<div class="bg"></div>
+<form class="form-group container-fluid">
+  <div class="container mb-3">
+    <div class="input-group">
+      <span class="input-group-text">Articles Filter</span>
+      <input type="text" [(ngModel)]="filterText" name="table" class="form-control" aria-describedby="filter"
+        placeholder="Enter title here">
+    </div>
+  </div>
+  <div class="container">
+    <table>
+      <tr *ngFor="let article of articles | filter: filterText">
+        <div class="wrapper">
+          <div class="div1">
+            <div class="col" style="width: 200px;">
+              <td>{{ article.title }}</td>
+            </div>
+            <div class="col" style="width: 200px;">
+              <td>{{ article.subject }}</td>
+            </div>
+            <div class="col" style="width: 700px;">
+              <td>{{ article.text }}</td>
+            </div>
+          </div>
+          <div class="d-grid gap-3 d-md-flex justify-content-md-end" id="div2">
+            <div class="btn-update">
+              <button type="button" class="btn btn-outline-warning" (click)="UpdateArticle(article)" style="margin: 0 15px;">update</button>
+            </div>
+            <div class="btn-delete">
+              <button type="button" mat-fab color="primary" matTooltip="Delete"
+                matTooltipPosition="right" aria-label="Example icon button with a delete icon"
+                (click)="deleteArticle(article)">
+                <mat-icon>delete</mat-icon>
+              </button></div>
+          </div>
+        </div>
+      </tr>
+      <button type="button" class="btn btn-success" [routerLink]="['/add']">Add</button>
+    </table>
+  </div>
+</form>

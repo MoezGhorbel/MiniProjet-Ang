@@ -1,0 +1,36 @@
+<div>
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <span class="material-icons" style="color:yellow">emoji_nature</span>
+        </button>
+        <div>
+            <button mat-raised-button color="primary">
+                <span class="material-icons">home</span>
+                <a mat-button [routerLink]="['']">Home</a>
+            </button>
+        </div>
+        <span class="spacer"></span>
+        <div class="row">
+            <div class="col">
+                <button mat-raised-button color="primary">
+                    <span class="material-icons">login</span>
+                    <a mat-button [routerLink]="['/login']">Login</a>
+                </button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="primary">
+                    <span class="material-icons">account_circle</span>
+                    <a mat-button [routerLink]="['/register']">Sign up</a>
+                </button>
+            </div>
+        </div>
+        <div class="com">
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>share</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar>
+</div>

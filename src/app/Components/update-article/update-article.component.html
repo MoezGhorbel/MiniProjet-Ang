@@ -1,0 +1,23 @@
+<div class="bg"></div>
+<form [formGroup]="updateForm" class="form-group container-fluid" (ngSubmit)="Updated()">
+    <legend class="text-center fw-bold mb-5">Update Article</legend>
+  <div class="container">
+    <div class="mb-3 row">
+      <div class="col">
+        <label for="title" class="form-label">Title :</label>
+        <input type="text" formControlName="title" class="form-control" name="title" placeholder="Enter title here">
+      </div>
+      <div class="col">
+        <label for="subject" class="form-label">Subject :</label>
+        <input type="email" formControlName="subject" class="form-control" name="subject" placeholder="Enter subject here">
+      </div>
+    </div>
+    <div class="input-group">
+      <span class="input-group-text">Textarea&nbsp;<span class="material-icons">article</span></span>
+      <textarea class="form-control"  formControlName="text" aria-label="With textarea" name="text"></textarea>
+    </div>
+    <div class="example-button-row">
+      <button type="submit" class="btn btn-success">Done</button>
+    </div>
+  </div>
+</form>

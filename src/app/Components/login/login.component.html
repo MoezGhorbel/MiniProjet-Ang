@@ -1,0 +1,20 @@
+<div class="bg"></div>
+<form>
+    <div class="row">
+        <div class="col-logo">
+            <h1>
+                <span class="material-icons">emoji_nature</span>
+                Connect with friends and share your thoughts with world.
+            </h1>
+        </div>
+        <div class="col-form">
+            <div class="form-container">
+                <input type="text" placeholder="Enter you email here" [(ngModel)]="email" name="email">
+                <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+                <button type="submit" class="btn-login" (click)="submitLogin()">Log In</button>
+                <a>Forgot Password?</a>
+                <button class="btn-new">Create New Account</button>
+            </div>
+        </div>
+    </div>
+</form>
